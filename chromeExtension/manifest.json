@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Table of Contents",
+  "version": "1.0",
+  "description": "Generate a custom table of contents for the current page.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.jpeg",
+      "48": "icon.jpeg",
+      "128": "icon.jpeg"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
